@@ -9,16 +9,8 @@ import 'package:flutter_explore/dart_playground/words/saved.dart';
 class EnglishWordsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(primaryColor: Colors.orangeAccent),
-      title: "English Words",
-      home: EnglishWordsWidget(),
-    );
+    return EnglishWordsWidget();
   }
-}
-
-void main() {
-  runApp(EnglishWordsApp());
 }
 
 class EnglishWordsWidget extends StatefulWidget {
