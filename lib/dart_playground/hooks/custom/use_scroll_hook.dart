@@ -14,7 +14,7 @@ class _ScrollerHook extends Hook<ScrollController> {
 }
 
 class _ScrollerHookState extends HookState<ScrollController, _ScrollerHook> {
-  ScrollController scrollController;
+  ScrollController scrollController = ScrollController();
 
   void scrollAnimation(AnimationController animationController,
       ScrollController scrollController) {
@@ -32,10 +32,9 @@ class _ScrollerHookState extends HookState<ScrollController, _ScrollerHook> {
   @override
   void initHook() {
     super.initHook();
-    scrollController = ScrollController()
-      ..addListener(() {
-        scrollAnimation(hook.animationController, scrollController);
-      });
+    scrollController.addListener(() {
+      scrollAnimation(hook.animationController, scrollController);
+    });
   }
 
   @override
@@ -50,6 +49,7 @@ class _ScrollerHookState extends HookState<ScrollController, _ScrollerHook> {
   }
 }
 
-ScrollController useScrollControllerWithAnimation(AnimationController animationController) {
+ScrollController useScrollControllerWithAnimation(
+    AnimationController animationController) {
   return use(_ScrollerHook(animationController));
 }

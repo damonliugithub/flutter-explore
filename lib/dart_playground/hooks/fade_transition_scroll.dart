@@ -21,7 +21,8 @@ class FadeTransitionScrollDemo extends StatelessWidget {
 class FadeTransitionUseScrollControllerHookDemo extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    final animation = useAnimationController(duration: Duration(milliseconds: 800), initialValue: 0);
+    final animation = useAnimationController(
+        duration: Duration(milliseconds: 800), initialValue: 0);
     final controller = useScrollControllerWithAnimation(animation);
     return Container(
       color: Colors.blueGrey,
@@ -58,7 +59,7 @@ class FadeTransitionUseScrollControllerHookDemo extends HookWidget {
 }
 
 class FadeTransitionScrollNormalStatefulDemo extends StatefulWidget {
-  FadeTransitionScrollNormalStatefulDemo({Key key}) : super(key: key);
+  FadeTransitionScrollNormalStatefulDemo({Key? key}) : super(key: key);
 
   @override
   _FadeTransitionScrollNormalStatefulDemoState createState() =>
@@ -68,9 +69,8 @@ class FadeTransitionScrollNormalStatefulDemo extends StatefulWidget {
 class _FadeTransitionScrollNormalStatefulDemoState
     extends State<FadeTransitionScrollNormalStatefulDemo>
     with SingleTickerProviderStateMixin {
-  AnimationController animationController;
-  Animation<double> animation;
-  ScrollController scrollController;
+  late AnimationController animationController;
+  late ScrollController scrollController;
 
   _FadeTransitionScrollNormalStatefulDemoState();
 

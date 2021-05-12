@@ -24,7 +24,7 @@ class Product {
 }
 
 class ProductRepository {
-  static loadProducts(Category category) async {
+  static loadProducts(Category? category) async {
     File jsonFile =
         new File('${Directory.current.path}/lib/dart_playground/io/products.json');
     var productionJson = await jsonFile.readAsString(encoding: utf8);

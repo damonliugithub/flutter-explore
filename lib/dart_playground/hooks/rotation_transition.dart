@@ -53,7 +53,7 @@ class RotationTransitionHookDemo extends HookWidget {
 }
 
 class RotationTransitionStatefulDemo extends StatefulWidget {
-  RotationTransitionStatefulDemo({Key key}) : super(key: key);
+  RotationTransitionStatefulDemo({Key? key}) : super(key: key);
 
   @override
   _RotationTransitionStatefulDemoState createState() =>
@@ -63,7 +63,7 @@ class RotationTransitionStatefulDemo extends StatefulWidget {
 class _RotationTransitionStatefulDemoState
     extends State<RotationTransitionStatefulDemo>
     with SingleTickerProviderStateMixin {
-  AnimationController controller;
+  late AnimationController controller;
 
   _RotationTransitionStatefulDemoState();
 

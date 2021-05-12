@@ -18,7 +18,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -30,6 +30,13 @@ dependencies:
   cupertino_icons: ^1.0.0
   english_words: ^3.1.5
   flutter_hooks: ^0.16.0
+
+  ############### geolocator start #############
+  baseflow_plugin_template:
+    git:
+      url: git://github.com/Baseflow/baseflow_plugin_template.git
+      ref: v2.0.0-nullsafety
+  geolocator: ^7.0.3
 
 dev_dependencies:
   flutter_test:
